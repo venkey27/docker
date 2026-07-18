@@ -37,21 +37,21 @@ resource "aws_security_group" "allow_docker" {
   }
 
   ingress {
-    from_port        = 80   # for testing 
+    from_port        = 80   # for testing of docker run command  docker run -d -p 80:80 --name nginx nginx:latest
     to_port          = 80
     protocol         = "tcp"
     cidr_blocks      =  ["0.0.0.0/0"]
   }
 
   ingress {
-    from_port        = 8080 # for testing 
+    from_port        = 8080 # for testing of docker run command docker run -d -p 8080:80 --name nginx-1 nginx:latest
     to_port          = 8080
     protocol         = "tcp"
     cidr_blocks      =  ["0.0.0.0/0"]
   }
 
   ingress {
-    from_port        = 8081 # for testing 
+    from_port        = 8081 # for testing of docker run command docker run -d -p 8081:80 --name nginx-2 nginx:latest
     to_port          = 8081
     protocol         = "tcp"
     cidr_blocks      =  ["0.0.0.0/0"]
