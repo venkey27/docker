@@ -26,7 +26,7 @@ resource "aws_instance" "terraform_demo" {
 
 # It creates in default VPC
 resource "aws_security_group" "allow_docker" {
-  name        = "allow_terraform"
+  name        = "allow_docker_terraform"
   description = "Allow TLS inbound traffic and all outbound traffic"
 
   ingress {
