@@ -37,21 +37,21 @@ resource "aws_security_group" "allow_docker" {
   }
 
   ingress {
-    from_port        = 80
+    from_port        = 80   # for testing 
     to_port          = 80
     protocol         = "tcp"
     cidr_blocks      =  ["0.0.0.0/0"]
   }
 
   ingress {
-    from_port        = 8080
+    from_port        = 8080 # for testing 
     to_port          = 8080
     protocol         = "tcp"
     cidr_blocks      =  ["0.0.0.0/0"]
   }
 
   ingress {
-    from_port        = 8081
+    from_port        = 8081 # for testing 
     to_port          = 8081
     protocol         = "tcp"
     cidr_blocks      =  ["0.0.0.0/0"]
